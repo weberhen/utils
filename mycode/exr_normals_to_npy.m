@@ -14,14 +14,15 @@
 %
 % Author: Henrique Weber
 % e-mail address: henrique.weber.1@ulaval.ca
-% Release: 0
-% Release date: 06/07/17
+% Release: 1
+% Release date: 06/27/17
 
 function exr_normals_to_npy(exr_filename)
 
 %load normal map
 exr_normal_map_data = pfs_read_image(exr_filename);
 
+%flip x and z coordinates
 exr_normal_map_data(:,:,1) = exr_normal_map_data(:,:,1)*-1;
 exr_normal_map_data(:,:,3) = exr_normal_map_data(:,:,3)*-1;
 
