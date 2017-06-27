@@ -1,7 +1,7 @@
 %% EXR_NORMALS_TO_NPY: converts exr containing normals to a numpy file
 % usage: B=EXR_NORMALS_TO_NPY(exr_filename)          % default method
 % 
-% Take an exr file and loads it using the EnvironmentMap lib to save
+% Take an exr file and loads it using the pfstools to save
 % it as npy using the npy-matlab converter
 %
 % arguments (exr_filename):
@@ -20,9 +20,8 @@
 function exr_normals_to_npy(exr_filename)
 
 %load normal map
-exr_normal_map = EnvironmentMap(exr_filename,EnvironmentMapFormat.LatLong,'clampData',false);
+exr_normal_map_data = pfs_read_image(exr_filename);
 
-exr_normal_map_data = exr_normal_map.data;
 exr_normal_map_data(:,:,1) = exr_normal_map_data(:,:,1)*-1;
 exr_normal_map_data(:,:,3) = exr_normal_map_data(:,:,3)*-1;
 
