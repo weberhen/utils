@@ -1,12 +1,12 @@
 %% vplstxt_to_vplsmat: convert data_vpls.txt to data_vpls.mat
-% usage: B=EXR_NORMALS_TO_NPY(folder)          % default method
+% usage: vplstxt_to_vplsmat(folder)          % default method
 % 
 % Convert all files called vpls_data.txt to vpls_data.mat to speed up its
 % later usage. The function find all vpls_data.txt recursively inside the
 % given folder
 %
-% arguments (folder):
-%   A - string containing the full path of the folder 
+% arguments:
+%   folder - string containing the full path of the folder 
 %
 % arguments (output):
 %   none

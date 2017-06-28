@@ -1,11 +1,11 @@
-%% EXR_NORMALS_TO_NPY: converts exr containing normals to a numpy file
-% usage: B=EXR_NORMALS_TO_NPY(exr_filename)          % default method
+%% exr_normals_to_npy: converts exr containing normals to a numpy file
+% usage: exr_normals_to_npy(exr_filename)          % default method
 % 
 % Take an exr file and loads it using the pfstools to save
 % it as npy using the npy-matlab converter
 %
-% arguments (exr_filename):
-%   A - string containing the HOLE name of the file (including its
+% arguments:
+%   exr_filename - string containing the HOLE name of the file (including its
 %   location)
 %
 % arguments (output):
@@ -14,7 +14,7 @@
 %
 % Author: Henrique Weber
 % e-mail address: henrique.weber.1@ulaval.ca
-% Release: 1
+% Release: 0
 % Release date: 06/27/17
 
 function exr_normals_to_npy(exr_filename)
